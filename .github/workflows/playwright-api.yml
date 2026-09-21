@@ -3,7 +3,7 @@ name: Playwright API Tests
 on:
   schedule:
     branches:
-      - cron: '0 17 * * *'
+    - cron: '0 17 * * *'
   workflow_dispatch:
 
 jobs:
