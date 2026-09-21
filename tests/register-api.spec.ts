@@ -30,8 +30,6 @@ test('Register API - create user and profile', async ({ request }) => {
 
   const signupBody = await signupResponse.json();
 
-  console.log('Signup response:', signupBody);
-
   const userId = signupBody.user.id;
   const accessToken = signupBody.access_token;
 
@@ -57,8 +55,6 @@ test('Register API - create user and profile', async ({ request }) => {
   expect(profileResponse.status()).toBe(201);
 
   const profileBody = await profileResponse.json();
-
-  console.log('Profile response:', profileBody);
 
   expect(profileBody[0].id).toBe(userId);
   expect(profileBody[0].username).toBe(username);
